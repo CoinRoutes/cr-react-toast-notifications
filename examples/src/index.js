@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { render } from 'react-dom';
-import { RadioGroup, Radio } from 'react-radios';
 import { jsx } from '@emotion/core';
 
 import {
@@ -156,21 +155,6 @@ function Toasts() {
           Let users know what&apos;s happening in your app.
         </Title>
         <div css={{ marginBottom: '1em', marginTop: '1em' }}>
-          <RadioGroup value={appearance} onChange={handleAppearanceChange}>
-            {appearances.map(a => (
-              <label
-                key={a.value}
-                css={{
-                  alignItems: 'center',
-                  display: 'inline-flex',
-                  marginRight: '1em',
-                }}
-              >
-                <Radio value={a.value} />
-                <div css={{ marginLeft: '0.25em' }}>{a.label}</div>
-              </label>
-            ))}
-          </RadioGroup>
         </div>
         <div css={{ alignItems: 'center', display: 'flex' }}>
           <Button appearance={appearance} onClick={add}>
